@@ -1,0 +1,51 @@
+/*
+ * QOMIQ: tokeny značky. Zdroj pravdy pro barvy, písmo a pohyb; bere je
+ * Filament téma (resources/css/filament.css) i weby (Astro, Next).
+ *
+ * Monochrom: inkoust na papíře. Barva jen pro stavy (chyba, hotovo…).
+ * Tmavý režim: třída .dark (Filament) nebo .theme-dark (web qomiq.cz).
+ */
+
+:root {
+    --qomiq-ink: #121212;
+    --qomiq-paper: #f4f4f2;
+    --qomiq-paper-2: #ebebe9;
+    --qomiq-surface: #ffffff;
+    --qomiq-surface-2: #f8f8f6;
+    --qomiq-muted: #6e6e6c;
+    --qomiq-line: #d8d8d4;
+    --qomiq-line-strong: #b9b9b4;
+
+    /* Stavy: tlumené, ať nepřekřičí monochrom. */
+    --qomiq-danger: #b3261e;
+    --qomiq-success: #2e6b4a;
+    --qomiq-warning: #9a5b00;
+    --qomiq-info: #35597a;
+
+    --qomiq-font: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+    --qomiq-radius: 1rem;
+    --qomiq-radius-sm: 0.75rem;
+    --qomiq-ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --qomiq-shadow-lift: 0 14px 32px -14px rgb(18 18 18 / 0.55);
+    --qomiq-shadow-lift-hover: 0 22px 44px -14px rgb(18 18 18 / 0.65);
+}
+
+:root:where(.dark, .theme-dark),
+:where(.dark, .theme-dark) {
+    --qomiq-ink: #f4f4f2;
+    --qomiq-paper: #0c0c0c;
+    --qomiq-paper-2: #141414;
+    --qomiq-surface: #141414;
+    --qomiq-surface-2: #1c1c1c;
+    --qomiq-muted: #a1a19f;
+    --qomiq-line: #2a2a2a;
+    --qomiq-line-strong: #4a4a48;
+
+    --qomiq-danger: #f2a39b;
+    --qomiq-success: #8cc7a5;
+    --qomiq-warning: #e6b866;
+    --qomiq-info: #9dbbd6;
+
+    --qomiq-shadow-lift: 0 14px 32px -14px rgb(0 0 0 / 0.8);
+    --qomiq-shadow-lift-hover: 0 22px 44px -14px rgb(0 0 0 / 0.9);
+}

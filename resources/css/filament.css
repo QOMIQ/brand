@@ -1,0 +1,291 @@
+/*
+ * QOMIQ téma pro Filament 4. Projekt ho importuje ve svém Filament tématu
+ * hned za téma Filamentu (viz README). Pravidla jsou mimo @layer, takže
+ * přebijí komponenty Filamentu bez !important.
+ *
+ * Směr: qomiq.cz. Monochrom (inkoust na papíře), Montserrat, nadpisy 900,
+ * černá „pilulková“ tlačítka se stínem, karty s jemnou linkou, ne stínem.
+ */
+@import '../../tokens.css';
+
+/* ── Základ ─────────────────────────────────────────── */
+
+/*
+ * Tailwind 4 má výchozí barvu rámečku currentColor. Oddělovače bez vlastní
+ * barvy (řádky tabulek Lunaru) by v tmavém režimu svítily bíle. V base
+ * vrstvě, takže utility s barvou rámečku pořád vyhrají.
+ */
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop {
+        border-color: var(--qomiq-line);
+    }
+}
+
+.fi-body {
+    background: var(--qomiq-paper);
+    color: var(--qomiq-ink);
+    font-weight: 400;
+}
+
+::selection {
+    background: var(--qomiq-ink);
+    color: var(--qomiq-paper);
+}
+
+/* ── Logo ───────────────────────────────────────────── */
+.qomiq-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    height: 100%;
+    color: var(--qomiq-ink);
+}
+.qomiq-logo__wordmark { height: 1.1rem; width: auto; }
+.qomiq-logo__symbol { height: 1.75rem; width: auto; flex-shrink: 0; }
+.qomiq-logo__client {
+    font-weight: 800;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+}
+
+/* ── Sidebar ────────────────────────────────────────── */
+.fi-sidebar { background: var(--qomiq-paper); }
+@media (min-width: 64rem) {
+    .fi-sidebar { border-inline-end: 1px solid var(--qomiq-line); }
+}
+.fi-sidebar-group-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--qomiq-muted);
+}
+.fi-sidebar-item-btn { border-radius: 999px; padding-inline: 0.85rem; }
+.fi-sidebar-item-label { font-weight: 500; }
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn {
+    background: var(--qomiq-ink);
+}
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn > .fi-sidebar-item-label,
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn > .fi-icon {
+    color: var(--qomiq-paper);
+    font-weight: 600;
+}
+
+/* ── Hlavička stránky: jediné „hlasité“ místo ───────── */
+.fi-header-heading {
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--qomiq-ink);
+}
+.fi-header-subheading { color: var(--qomiq-muted); }
+.fi-breadcrumbs { font-size: 0.8rem; color: var(--qomiq-muted); }
+
+/* ── Karty, sekce, tabulky, widgety ─────────────────── */
+.fi-section:not(.fi-section-not-contained):not(.fi-aside),
+.fi-ta-ctn,
+.fi-wi-stats-overview-stat,
+.fi-wi-chart,
+.fi-account-widget {
+    background: var(--qomiq-surface);
+    border-radius: var(--qomiq-radius);
+    box-shadow: none;
+    --tw-ring-color: var(--qomiq-line);
+    border: 1px solid var(--qomiq-line);
+}
+.fi-section-header-heading { font-weight: 700; letter-spacing: -0.01em; }
+
+.fi-ta-header-cell {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--qomiq-muted);
+    background: var(--qomiq-surface-2);
+}
+.fi-ta-row:hover { background: var(--qomiq-surface-2); }
+
+/* ── Tlačítka ───────────────────────────────────────── */
+.fi-btn {
+    border-radius: 999px;
+    font-weight: 700;
+    transition:
+        transform 0.3s var(--qomiq-ease),
+        box-shadow 0.3s var(--qomiq-ease),
+        background-color 0.2s;
+}
+.fi-btn.fi-color-primary:not(.fi-outlined):not(label):not([aria-pressed]) {
+    background: var(--qomiq-ink);
+    color: var(--qomiq-paper);
+    box-shadow: var(--qomiq-shadow-lift);
+}
+.fi-btn.fi-color-primary:not(.fi-outlined):not(label):not([aria-pressed]) > .fi-icon {
+    color: var(--qomiq-paper);
+}
+.fi-btn.fi-color-primary:not(.fi-outlined):not(.fi-disabled):not([disabled]):hover {
+    transform: translateY(-2px);
+    box-shadow: var(--qomiq-shadow-lift-hover);
+}
+/* Sekundární tlačítka: linka jako btn-ghost na webu (Filament ji kreslí stínem). */
+.fi-btn.fi-outlined,
+.fi-btn:not(.fi-color),
+.fi-btn.fi-color-gray {
+    box-shadow: inset 0 0 0 1.5px var(--qomiq-line-strong);
+}
+.fi-btn:not(.fi-color):not(.fi-disabled):not([disabled]):hover,
+.fi-btn.fi-color-gray:not(.fi-disabled):not([disabled]):hover {
+    box-shadow: inset 0 0 0 1.5px var(--qomiq-ink);
+}
+
+/* ── Formuláře ──────────────────────────────────────── */
+/* Pole na papíře uvnitř bílé karty, linka výraznější než u karet. */
+.fi-input-wrp {
+    border-radius: var(--qomiq-radius-sm);
+    background: var(--qomiq-paper);
+    /* Linku kreslí Filament jako ring (box-shadow), proto stínem, ne borderem. */
+    box-shadow: 0 0 0 1px var(--qomiq-line-strong);
+}
+.fi-input-wrp:not(.fi-disabled):focus-within {
+    box-shadow: 0 0 0 2px var(--qomiq-ink);
+}
+.fi-input-wrp.fi-invalid {
+    box-shadow: 0 0 0 1px var(--qomiq-danger);
+}
+.fi-input-wrp.fi-invalid:focus-within {
+    box-shadow: 0 0 0 2px var(--qomiq-danger);
+}
+.fi-input-wrp .fi-input,
+.fi-input-wrp input,
+.fi-input-wrp textarea,
+.fi-input-wrp select {
+    background: transparent;
+}
+.fi-fo-field-label-content { font-weight: 600; }
+
+/* ── Výběry (select) ────────────────────────────────── */
+
+/* Seznam možností Filamentu (searchable / multiple select). */
+.fi-select-input-options-ctn {
+    border-radius: var(--qomiq-radius-sm);
+    background: var(--qomiq-surface);
+    border: 1px solid var(--qomiq-line);
+    box-shadow: 0 24px 55px -30px rgb(18 18 18 / 0.45);
+    padding: 0.35rem;
+}
+.fi-select-input-option {
+    border-radius: 0.6rem;
+}
+.fi-select-input-option:hover,
+.fi-select-input-option[aria-selected='true'] {
+    background: var(--qomiq-ink);
+    color: var(--qomiq-paper);
+}
+
+/*
+ * Nativní <select>: Chrome 135+ umí seznam stylovat (customizable select).
+ * Jinde zůstane nativní seznam, barvy mu dá color-scheme Filamentu.
+ */
+select.fi-select-input option {
+    background: var(--qomiq-surface);
+    color: var(--qomiq-ink);
+}
+@supports (appearance: base-select) {
+    select.fi-select-input,
+    select.fi-select-input::picker(select) {
+        appearance: base-select;
+    }
+    /* Šipku kreslí Filament obrázkem na pozadí, vlastní ikonu výběru skrýt. */
+    select.fi-select-input::picker-icon {
+        display: none;
+    }
+    select.fi-select-input::picker(select) {
+        margin-block: 0.4rem;
+        padding: 0.35rem;
+        border: 1px solid var(--qomiq-line);
+        border-radius: var(--qomiq-radius-sm);
+        background: var(--qomiq-surface);
+        color: var(--qomiq-ink);
+        box-shadow: 0 24px 55px -30px rgb(18 18 18 / 0.45);
+    }
+    select.fi-select-input option {
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.6rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+    select.fi-select-input option::checkmark {
+        display: none;
+    }
+    select.fi-select-input option:hover,
+    select.fi-select-input option:focus-visible {
+        background: var(--qomiq-surface-2);
+        outline: none;
+    }
+    select.fi-select-input option:checked {
+        background: var(--qomiq-ink);
+        color: var(--qomiq-paper);
+    }
+    /* Prázdná volba „Zvolte…“ jen jako tlumená nápověda. */
+    select.fi-select-input option[value=''] {
+        color: var(--qomiq-muted);
+    }
+}
+
+/* ── Stavy, záložky, modaly, dropdowny ──────────────── */
+.fi-badge { border-radius: 999px; font-weight: 600; }
+.fi-tabs { border-radius: 999px; }
+.fi-tabs-item { border-radius: 999px; font-weight: 600; }
+.fi-tabs-item.fi-active { background: var(--qomiq-ink); color: var(--qomiq-paper); }
+/* Popisek a ikonu barví Filament na potomcích, ne na záložce. */
+.fi-tabs-item.fi-active .fi-tabs-item-label,
+.fi-tabs-item.fi-active .fi-icon {
+    color: var(--qomiq-paper);
+}
+.fi-modal-window,
+.fi-dropdown-panel,
+.fi-no-notification {
+    border-radius: var(--qomiq-radius);
+    background: var(--qomiq-surface);
+}
+
+/* ── Přihlášení ─────────────────────────────────────── */
+.fi-simple-layout { background: var(--qomiq-paper); }
+.fi-simple-main {
+    border-radius: 1.5rem;
+    background: var(--qomiq-surface);
+    border: 1px solid var(--qomiq-line);
+    box-shadow: 0 45px 90px -35px rgb(18 18 18 / 0.35);
+}
+.fi-simple-header-heading { font-weight: 900; letter-spacing: -0.03em; }
+.fi-simple-header .qomiq-logo__wordmark { height: 1.5rem; }
+
+/* ── QOMIQ credit (skill qomiq-footer) ──────────────── */
+.qomiq-credit-bar {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+.qomiq-credit { display: inline-flex; text-decoration: none; color: #8a8a8a; }
+.qomiq-credit__inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.55;
+    transition: opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.qomiq-credit:hover .qomiq-credit__inner,
+.qomiq-credit:focus-visible .qomiq-credit__inner { opacity: 1; }
+.qomiq-credit__mark { height: 0.9rem; width: auto; display: block; }
+.qomiq-credit__text { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em; }
+.qomiq-credit__brand { font-weight: 700; letter-spacing: 0.05em; }
+
+/* ── Pohyb ──────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .fi-btn,
+    .qomiq-credit__inner { transition: none; }
+    .fi-btn:hover { transform: none !important; }
+}
