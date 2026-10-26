@@ -74,6 +74,12 @@
     color: var(--qomiq-paper);
     font-weight: 600;
 }
+/* Odznak (počet, tarif) na aktivní položce: obrácené barvy, jinak splyne. */
+.fi-sidebar-item.fi-active > .fi-sidebar-item-btn .fi-badge {
+    color: var(--qomiq-paper);
+    background: color-mix(in oklab, var(--qomiq-paper) 16%, transparent);
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--qomiq-paper) 40%, transparent);
+}
 
 /* ── Hlavička stránky: jediné „hlasité“ místo ───────── */
 .fi-header-heading {
