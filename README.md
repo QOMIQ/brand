@@ -19,7 +19,8 @@ Písmo Montserrat (OFL) přes Bunny Fonts (EU, bez logování). Soubory
 
 ## Filament admin ve značce QOMIQ
 
-Repo je soukromé. Composer potřebuje token s právem číst `QOMIQ/brand`.
+Repo je veřejné (loga a barvy jsou stejně na qomiq.cz, žádná tajemství),
+takže Composer ho stáhne v CI, při nasazení i na serveru bez tokenu.
 
 1. **Composer** (`backend/composer.json`):
 
@@ -31,9 +32,6 @@ Repo je soukromé. Composer potřebuje token s právem číst `QOMIQ/brand`.
        "qomiq/brand": "^0.1"
    }
    ```
-
-   Lokálně: `gh auth token` → `COMPOSER_AUTH='{"github-oauth":{"github.com":"<token>"}}'`.
-   V CI: secret `COMPOSER_AUTH` (fine-grained token, jen čtení `QOMIQ/brand`).
 
 2. **Téma** `resources/css/filament/admin/theme.css`:
 
