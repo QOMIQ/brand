@@ -1,0 +1,31 @@
+/*
+ * Kanonický styl QOMIQ creditu (QOMIQ/brand → credit/). Stejný pro React,
+ * HTML i Blade; Filament téma ho importuje (resources/css/filament.css).
+ *
+ * Přístupnost: barva z patičky (inherit), ne pevná šedá, takže drží kontrast
+ * okolního textu na světlém i tmavém pozadí. Klidová průhlednost 0.7, ne níž;
+ * kontrast proti pozadí patičky musí i tak vyjít ≥ 4.5:1.
+ */
+.qomiq-credit { display: inline-flex; text-decoration: none; color: inherit; }
+.qomiq-credit__inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.7;
+    transition: opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.qomiq-credit:hover .qomiq-credit__inner,
+.qomiq-credit:focus-visible .qomiq-credit__inner { opacity: 1; }
+.qomiq-credit__mark { height: 0.9rem; width: auto; display: block; flex: none; }
+/* Montserrat jako značka (Mont z qomiq.cz je DEMO licence, viz README). */
+.qomiq-credit__text {
+    font-family: var(--qomiq-font, 'Montserrat', ui-sans-serif, system-ui, sans-serif);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+.qomiq-credit__brand { font-weight: 700; letter-spacing: 0.05em; }
+
+@media (prefers-reduced-motion: reduce) {
+    .qomiq-credit__inner { transition: none; }
+}

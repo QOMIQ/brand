@@ -7,6 +7,7 @@
  * černá „pilulková“ tlačítka se stínem, karty s jemnou linkou, ne stínem.
  */
 @import '../../tokens.css';
+@import '../../credit/qomiq-credit.css';
 
 /* ── Základ ─────────────────────────────────────────── */
 
@@ -269,29 +270,15 @@ select.fi-select-input option {
 .fi-simple-header-heading { font-weight: 900; letter-spacing: -0.03em; }
 .fi-simple-header .qomiq-logo__wordmark { height: 1.5rem; }
 
-/* ── QOMIQ credit (skill qomiq-footer) ──────────────── */
+/* ── QOMIQ credit (credit/qomiq-credit.css) ─────────── */
 .qomiq-credit-bar {
     display: flex;
     justify-content: center;
     padding: 2rem 1rem;
 }
-.qomiq-credit { display: inline-flex; text-decoration: none; color: #8a8a8a; }
-.qomiq-credit__inner {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    opacity: 0.55;
-    transition: opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.qomiq-credit:hover .qomiq-credit__inner,
-.qomiq-credit:focus-visible .qomiq-credit__inner { opacity: 1; }
-.qomiq-credit__mark { height: 0.9rem; width: auto; display: block; }
-.qomiq-credit__text { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.04em; }
-.qomiq-credit__brand { font-weight: 700; letter-spacing: 0.05em; }
 
 /* ── Pohyb ──────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-    .fi-btn,
-    .qomiq-credit__inner { transition: none; }
+    .fi-btn { transition: none; }
     .fi-btn:hover { transform: none !important; }
 }
