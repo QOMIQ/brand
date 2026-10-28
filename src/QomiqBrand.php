@@ -65,13 +65,13 @@ final class QomiqBrand implements Plugin
             ->colors(Palette::all())
             ->font('Montserrat', self::FONT_URL)
             // FOOTER se vykresluje v hlavním i jednoduchém layoutu (přihlášení).
-            ->renderHook(PanelsRenderHook::FOOTER, fn (): View => self::view('credit'));
+            ->renderHook(PanelsRenderHook::FOOTER, fn (): View => self::view('credit-bar'));
     }
 
     /**
      * Pohled balíčku (resources/views, registruje BrandServiceProvider).
      *
-     * @param  'logo'|'credit'  $name
+     * @param  'logo'|'credit-bar'  $name
      * @param  array<string, mixed>  $data
      */
     private static function view(string $name, array $data = []): View

@@ -79,7 +79,8 @@ it('credit odkazuje na qomiq.cz v nove zalozce bezpecne', function () {
         ->toContain('<span class="qomiq-credit__brand">QOMIQ.cz</span>')
         ->toContain('href="https://qomiq.cz"')
         ->toContain('rel="noopener noreferrer"')
-        ->toContain('qomiq-credit__mark');
+        ->toContain('qomiq-credit__mark')
+        ->not->toContain('aria-label=');
 });
 
 it('tema importuje tokeny a styluje logo i credit', function () {
@@ -87,6 +88,6 @@ it('tema importuje tokeny a styluje logo i credit', function () {
 
     expect($css)->toContain("@import '../../tokens.css';")
         ->toContain('.qomiq-logo__client')
-        ->toContain('.qomiq-credit__inner')
+        ->toContain("@import '../../credit/qomiq-credit.css';")
         ->toContain('prefers-reduced-motion');
 });

@@ -10,9 +10,10 @@ use Illuminate\Support\HtmlString;
  */
 final class Logo
 {
-    public static function symbol(string $class = ''): HtmlString
+    /** @param  bool  $decorative  vedle textu se značkou: skrýt čtečkám (aria-hidden), ať se název neopakuje */
+    public static function symbol(string $class = '', bool $decorative = false): HtmlString
     {
-        return self::inline('qomiq-symbol.svg', $class);
+        return self::inline('qomiq-symbol.svg', $class, $decorative);
     }
 
     public static function wordmark(string $class = ''): HtmlString
@@ -30,9 +31,13 @@ final class Logo
         return dirname(__DIR__).'/assets/logo/'.$file;
     }
 
-    private static function inline(string $file, string $class): HtmlString
+    private static function inline(string $file, string $class, bool $decorative = false): HtmlString
     {
         $svg = self::file($file);
+
+        if ($decorative) {
+            $svg = str_replace(' role="img" aria-label="QOMIQ"', ' width="14" height="14" aria-hidden="true" focusable="false"', $svg);
+        }
 
         if ($class !== '') {
             $svg = preg_replace('/^<svg /', '<svg class="'.e($class).'" ', $svg, 1) ?? $svg;
