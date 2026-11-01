@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+<title>QOMIQ story: nový qomiq.cz (1080×1920)</title>
+<rect id="pozadi" width="1080" height="1920" fill="#050607"/>
+<image id="chrom" href="../logo/qq/qq-chrom.png" x="-18.42" y="904.99" width="1245.25" height="1245.25"/>
+<g id="r-wordmark" data-intro="wordmark"><g id="wordmark" transform="translate(88 236) scale(0.081633)"><g fill="none" stroke="#f4f6f5" stroke-width="80">
+      <g transform="translate(245 245)"><circle r="204.5"/><path d="M108.3 118.3 207.1 226.1"/></g>
+      <circle cx="813.4" cy="245" r="204.5"/>
+      <g transform="translate(2058.6 245)"><circle r="204.5"/><path d="M108.3 118.3 207.1 226.1"/></g>
+    </g>
+    <path fill="#f4f6f5" transform="translate(1136.8 0)" d="M0 489.5V.5h87.1L220 214.2 352.9.5H440v489h-80V140.6L220 365.8 80 140.6v348.9z"/>
+    <path fill="#f4f6f5" transform="translate(1655.2 0)" d="M0 .5h80v489H0z"/></g></g>
+<g id="r-nadpis-1" data-rise="0"><text id="nadpis-1" x="88" y="520" font-family="'Krona One', sans-serif" font-size="128" letter-spacing="-3.84" fill="#f4f6f5">Nový</text></g>
+<g id="r-nadpis-2" data-rise="0.15"><text id="nadpis-2" x="88" y="660" font-family="'Krona One', sans-serif" font-size="128" letter-spacing="-3.84" fill="#f4f6f5">qomiq.cz.</text></g>
+<g id="r-zvyrazneni" data-rise="0.35"><text id="nadpis-zvyrazneni" x="88" y="800" font-family="Montserrat, sans-serif" font-size="136" font-weight="300" font-style="italic" letter-spacing="-4.08" fill="#f4f6f5">Je venku.</text>
+  <rect id="nadpis-zvyrazneni-linka" x="88" y="813.6" width="583.17" height="9.52" fill="#c8ff3d"/></g>
+<g id="r-text" data-rise="0.6"><text id="text" x="88" y="915" font-family="Montserrat, sans-serif" font-size="38" font-weight="400" fill="#8a918f"><tspan x="88">Kompletně nový vzhled.</tspan><tspan x="88" dy="53.2">Česky i anglicky.</tspan></text></g>
+<g id="voditka" display="none" fill="none" stroke="#ff3df5" stroke-width="3" stroke-dasharray="13.2 8.8">
+  <rect x="0" y="0" width="1080" height="200" fill="#ff3df5" fill-opacity="0.15"/><rect x="4" y="4" width="213.12" height="34" rx="7.33" fill="#ff3df5" stroke="none"/><text x="12" y="28" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#000" stroke="none">lišta Instagramu</text>
+  <rect x="0" y="1640" width="1080" height="280" fill="#ff3df5" fill-opacity="0.15"/><rect x="4" y="1656" width="213.12" height="34" rx="7.33" fill="#ff3df5" stroke="none"/><text x="12" y="1680" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#000" stroke="none">pole pro odpověď</text>
+  <rect x="88" y="1030" width="560" height="120" fill="#ff3df5" fill-opacity="0"/><rect x="92" y="996" width="311.68" height="34" rx="7.33" fill="#ff3df5" stroke="none"/><text x="100" y="1020" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#000" stroke="none">sem odkaz (link sticker)</text>
+  <rect x="88" y="380" width="904" height="600" fill="#ff3df5" fill-opacity="0"/><rect x="92" y="346" width="65.28" height="34" rx="7.33" fill="#ff3df5" stroke="none"/><text x="100" y="370" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#000" stroke="none">text</text>
+</g>
+</svg>

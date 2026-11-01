@@ -60,7 +60,7 @@ export function size(svg) {
 // SVG vložené do HTML: relativní cesty k obrázkům platí vůči složce SVG (<base>).
 // page = rozměr v mm pro tisk do PDF, px = rozměr screenshotu (mm zaokrouhlené na celé px,
 // proto preserveAspectRatio none: zkreslení < 0,2 %, žádný průhledný proužek u okraje).
-export function html(svgPath, { guides = false, script = '', page = null, px = null } = {}) {
+export function html(svgPath, { guides = false, script = '', page = null, px = null, css = '' } = {}) {
   let svg = readFileSync(svgPath, 'utf8').replace(/^<\?xml[^>]*>\s*/, '');
   if (px) svg = svg.replace('<svg ', '<svg preserveAspectRatio="none" ');
   const base = pathToFileURL(dirname(svgPath) + '/').href;
@@ -72,7 +72,7 @@ export function html(svgPath, { guides = false, script = '', page = null, px = n
   return `<!doctype html><html><head><meta charset="utf-8"><base href="${base}"><style>
 ${fontFaces}
 html,body{margin:0;background:transparent;overflow:hidden}svg{display:block}${box}
-${guides ? '#voditka{display:inline!important}' : ''}
+${guides ? '#voditka{display:inline!important}' : ''}${css}
 </style></head><body>${svg}${script}</body></html>`;
 }
 
