@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<title>QOMIQ šablona: Instagram příspěvek, text (1080×1350)</title>
+<rect id="pozadi" width="1080" height="1350" fill="#050607"/>
+<g id="stitek"><circle cx="95.63" cy="116.08" r="7.63" fill="#c8ff3d"/><text x="126.15" y="124" font-family="Montserrat, sans-serif" font-size="22" font-weight="600" letter-spacing="4.4" fill="#8a918f">SLUŽBY</text></g>
+<g id="znacka" transform="translate(948 112) scale(0.12517799999999998) translate(-503.5 -500)">
+    <mask id="znacka-a" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000"><rect width="1000" height="1000" fill="#fff"/><path d="M707.3 570.8A204.5 204.5 0 0 1 473.3 553.7" fill="none" stroke="#000" stroke-width="128"/></mask>
+    <mask id="znacka-b" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000"><rect width="1000" height="1000" fill="#fff"/><path d="M283.7 376.8A204.5 204.5 0 0 1 517.7 393.9" fill="none" stroke="#000" stroke-width="128"/></mask>
+    <g fill="none" stroke="#f4f6f5" stroke-width="80" transform="translate(8 22)">
+      <g mask="url(#znacka-a)"><circle cx="388.5" cy="552.4" r="204.5"/><path d="M496.8 670.7 595.6 778.5"/></g>
+      <g mask="url(#znacka-b)"><circle cx="602.5" cy="395.2" r="204.5"/><path d="M710.8 513.5 809.6 621.3"/></g>
+    </g>
+  </g>
+<text id="cislo" x="992" y="470" font-family="'Krona One', sans-serif" font-size="260" letter-spacing="-7.8" fill="rgba(255,255,255,0.08)" text-anchor="end">03</text>
+<text id="nadpis-1" x="88" y="650" font-family="'Krona One', sans-serif" font-size="74" letter-spacing="-2.22" fill="#f4f6f5">Bezpečnost</text>
+<text id="nadpis-2" x="88" y="732" font-family="'Krona One', sans-serif" font-size="74" letter-spacing="-2.22" fill="#f4f6f5">není feature.</text>
+<text id="nadpis-zvyrazneni" x="88" y="820" font-family="Montserrat, sans-serif" font-size="80" font-weight="300" font-style="italic" letter-spacing="-2.4" fill="#f4f6f5">Je to základ.</text>
+  <rect id="nadpis-zvyrazneni-linka" x="88" y="828" width="460.92" height="5.6" fill="#c8ff3d"/>
+<text id="text" x="88" y="938" font-family="Montserrat, sans-serif" font-size="33" font-weight="400" fill="#8a918f"><tspan x="88">Každý projekt před spuštěním projde</tspan><tspan x="88" dy="47.85">pohledem útočníka. Penetrační testy,</tspan><tspan x="88" dy="47.85">code review, audit závislostí.</tspan></text>
+<path id="linka" d="M88 1172H992" stroke="#fff" stroke-opacity="0.1" stroke-width="2"/>
+<text id="web" x="88" y="1250" font-family="Montserrat, sans-serif" font-size="28" font-weight="600" fill="#f4f6f5">qomiq.cz</text>
+<text id="strana" x="992" y="1250" font-family="Montserrat, sans-serif" font-size="28" font-weight="500" fill="#8a918f" text-anchor="end">01 / 04</text>
+<g id="voditka" display="none" fill="none" stroke="#ff3df5" stroke-width="3" stroke-dasharray="13.2 8.8">
+  <rect x="34" y="0" width="1012" height="1350" fill="#ff3df5" fill-opacity="0"/><rect x="38" y="4" width="237.76" height="34" rx="7.33" fill="#ff3df5" stroke="none"/><text x="46" y="28" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#000" stroke="none">mřížka profilu 3:4</text>
+  <rect x="88" y="88" width="904" height="1174" fill="#ff3df5" fill-opacity="0"/><rect x="92" y="1270" width="114.56" height="34" rx="7.33" fill="#ff3df5" stroke="none"/><text x="100" y="1294" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#000" stroke="none">okraj 88</text>
+  <rect x="88" y="560" width="904" height="290" fill="#ff3df5" fill-opacity="0"/><rect x="92" y="526" width="422.56" height="34" rx="7.33" fill="#ff3df5" stroke="none"/><text x="100" y="550" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#000" stroke="none">nadpis: 2–3 řádky, max. ~13 znaků</text>
+  <rect x="88" y="890" width="904" height="200" fill="#ff3df5" fill-opacity="0"/><rect x="92" y="856" width="422.56" height="34" rx="7.33" fill="#ff3df5" stroke="none"/><text x="100" y="880" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#000" stroke="none">text: max. 3 řádky po ~36 znacích</text>
+</g>
+</svg>

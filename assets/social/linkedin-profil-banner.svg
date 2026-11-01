@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396" data-export-scale="2">
+<title>QOMIQ: LinkedIn banner osobního profilu (1584×396)</title>
+<rect id="pozadi" width="1584" height="396" fill="#050607"/>
+<image id="chrom" href="../logo/qq/qq-chrom.png" x="971.38" y="-146.4" width="810.86" height="810.86"/>
+<g id="wordmark" transform="translate(600 64) scale(0.061224)"><g fill="none" stroke="#f4f6f5" stroke-width="80">
+      <g transform="translate(245 245)"><circle r="204.5"/><path d="M108.3 118.3 207.1 226.1"/></g>
+      <circle cx="813.4" cy="245" r="204.5"/>
+      <g transform="translate(2058.6 245)"><circle r="204.5"/><path d="M108.3 118.3 207.1 226.1"/></g>
+    </g>
+    <path fill="#f4f6f5" transform="translate(1136.8 0)" d="M0 489.5V.5h87.1L220 214.2 352.9.5H440v489h-80V140.6L220 365.8 80 140.6v348.9z"/>
+    <path fill="#f4f6f5" transform="translate(1655.2 0)" d="M0 .5h80v489H0z"/></g>
+<text id="nadpis-1" x="600" y="178" font-family="'Krona One', sans-serif" font-size="42" letter-spacing="-1.26" fill="#f4f6f5">Stavíme weby</text>
+<text id="nadpis-2" x="600" y="228" font-family="'Krona One', sans-serif" font-size="42" letter-spacing="-1.26" fill="#f4f6f5">a aplikace.</text>
+<text id="nadpis-zvyrazneni" x="600" y="284" font-family="Montserrat, sans-serif" font-size="46" font-weight="300" font-style="italic" letter-spacing="-1.38" fill="#f4f6f5">Pořádně.</text>
+  <rect id="nadpis-zvyrazneni-linka" x="600" y="288.6" width="197.66" height="3.22" fill="#c8ff3d"/>
+<g id="stitek"><circle cx="605.21" cy="340.6" r="5.21" fill="#c8ff3d"/><text x="626.01" y="346" font-family="Montserrat, sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#8a918f">WEB STUDIO · OSTRAVA · QOMIQ.CZ</text></g>
+<g id="voditka" display="none" fill="none" stroke="#ff3df5" stroke-width="2" stroke-dasharray="7.199999999999999 4.800000000000001">
+  <circle cx="199" cy="396" r="152" fill="#ff3df5" fill-opacity="0.15"/><rect x="51" y="224" width="116.8" height="24" rx="4" fill="#ff3df5" stroke="none"/><text x="59" y="238" font-family="Montserrat, sans-serif" font-size="12" font-weight="700" fill="#000" stroke="none">fotka (počítač)</text>
+  <circle cx="270" cy="396" r="202" fill="#ff3df5" fill-opacity="0"/><rect x="72" y="164" width="103.36" height="24" rx="4" fill="#ff3df5" stroke="none"/><text x="80" y="178" font-family="Montserrat, sans-serif" font-size="12" font-weight="700" fill="#000" stroke="none">fotka (mobil)</text>
+  <rect x="560" y="40" width="600" height="320" fill="#ff3df5" fill-opacity="0"/><rect x="564" y="16" width="83.2" height="24" rx="4" fill="#ff3df5" stroke="none"/><text x="572" y="30" font-family="Montserrat, sans-serif" font-size="12" font-weight="700" fill="#000" stroke="none">text: tady</text>
+</g>
+</svg>

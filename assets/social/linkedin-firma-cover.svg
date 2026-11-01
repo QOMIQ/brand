@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1128" height="191" viewBox="0 0 1128 191" data-export-scale="2">
+<title>QOMIQ: LinkedIn cover firemní stránky (1128×191)</title>
+<rect id="pozadi" width="1128" height="191" fill="#050607"/>
+<image id="chrom" href="../logo/qq/qq-chrom.png" x="802.22" y="-106.52" width="463.35" height="463.35"/>
+<g id="stitek"><circle cx="236.16" cy="49.68" r="4.16" fill="#c8ff3d"/><text x="252.81" y="54" font-family="Montserrat, sans-serif" font-size="12" font-weight="600" letter-spacing="2.4" fill="#8a918f">WEB STUDIO · OSTRAVA</text></g>
+<text id="nadpis-1" x="232" y="106" font-family="'Krona One', sans-serif" font-size="28" letter-spacing="-0.84" fill="#f4f6f5">Stavíme weby a aplikace.</text>
+<text id="nadpis-zvyrazneni" x="232" y="146" font-family="Montserrat, sans-serif" font-size="30" font-weight="300" font-style="italic" letter-spacing="-0.9" fill="#f4f6f5">Pořádně.</text>
+  <rect id="nadpis-zvyrazneni-linka" x="232" y="149" width="128.91" height="2.1" fill="#c8ff3d"/>
+<g id="voditka" display="none" fill="none" stroke="#ff3df5" stroke-width="2" stroke-dasharray="7.199999999999999 4.800000000000001">
+  <rect x="24" y="111" width="160" height="160" fill="#ff3df5" fill-opacity="0.15"/><rect x="28" y="87" width="83.2" height="24" rx="4" fill="#ff3df5" stroke="none"/><text x="36" y="101" font-family="Montserrat, sans-serif" font-size="12" font-weight="700" fill="#000" stroke="none">logo firmy</text>
+  <rect x="200" y="24" width="640" height="143" fill="#ff3df5" fill-opacity="0"/><rect x="204" y="28" width="83.2" height="24" rx="4" fill="#ff3df5" stroke="none"/><text x="212" y="42" font-family="Montserrat, sans-serif" font-size="12" font-weight="700" fill="#000" stroke="none">text: tady</text>
+</g>
+</svg>

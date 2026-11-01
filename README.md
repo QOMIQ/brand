@@ -1,17 +1,28 @@
 # QOMIQ: značka
 
-Loga, barvy a písmo QOMIQ na jednom místě + Filament téma pro adminy
-projektů (náš superadmin i admin pro klienty).
+Loga, barvy a písmo QOMIQ na jednom místě, podklady pro sociální sítě
+a Filament téma pro adminy projektů (náš superadmin i admin pro klienty).
 
 ```
-assets/logo/        qomiq-symbol.svg, qomiq-wordmark.svg (currentColor), favicon.svg
-tokens.css          barvy, písmo, zaoblení, pohyb (světlý + tmavý režim)
+assets/logo/qq/     značka QQ, wordmark QOMIQ, limetková dlaždice, 3D chrom render (aktuální vzhled)
+assets/logo/        qomiq-symbol.svg, qomiq-wordmark.svg, favicon.svg (staré logo, Filament)
+assets/social/      LinkedIn bannery, profilovky, šablony příspěvků (SVG + PNG)
+assets/fonts/       Krona One, Montserrat (woff2, OFL) pro export šablon
+render-social.bat   export SVG → PNG (scripts/render-social.mjs)
+tokens.css          barvy, písmo, zaoblení, pohyb pro Filament (světlý + tmavý režim)
 resources/css/      filament.css: téma pro Filament 4
 resources/views/    logo v hlavičce, QOMIQ credit
 src/                QomiqBrand (Filament plugin), Palette, Logo
 ```
 
-Zdroj podkladů: [QOMIQ/web](https://github.com/QOMIQ/web) (`app/globals.css`,
+## Dokumentace
+
+- [docs/znacka.md](docs/znacka.md): vzhled značky („chrome on black“): barvy,
+  písmo, logo, co je ještě ve starém vzhledu
+- [docs/socialni-site.md](docs/socialni-site.md): bannery, profilovky, šablony
+  příspěvků, jak udělat nový příspěvek a export do PNG
+
+Zdroj podkladů Filament tématu: [QOMIQ/web](https://github.com/QOMIQ/web) (`app/globals.css`,
 `public/Qomiq.svg`, `public/QomiqFULL.svg`). Loga jsou vyčištěné exporty
 z CorelDRAW: UTF-8, barva z textu (`currentColor`), ořezaný viewBox.
 Písmo Montserrat (OFL) přes Bunny Fonts (EU, bez logování). Soubory
