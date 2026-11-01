@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="96mm" height="56mm" viewBox="0 0 96 56" data-export-pdf>
-<title>QOMIQ vizitka: Šimon Blatoň (90×50 mm + 3 mm spadávka)</title>
+<title>QOMIQ vizitka: Šimon Blatoń (90×50 mm + 3 mm spadávka)</title>
 <rect id="pozadi" width="96" height="56" fill="#050607"/>
 <g id="wordmark" transform="translate(7 7.4) scale(0.006939)"><g fill="none" stroke="#f4f6f5" stroke-width="80">
       <g transform="translate(245 245)"><circle r="204.5"/><path d="M108.3 118.3 207.1 226.1"/></g>
@@ -8,7 +8,7 @@
     </g>
     <path fill="#f4f6f5" transform="translate(1136.8 0)" d="M0 489.5V.5h87.1L220 214.2 352.9.5H440v489h-80V140.6L220 365.8 80 140.6v348.9z"/>
     <path fill="#f4f6f5" transform="translate(1655.2 0)" d="M0 .5h80v489H0z"/></g>
-<text id="jmeno" x="7" y="27" font-family="'Krona One', sans-serif" font-size="4.6" letter-spacing="-0.14" fill="#f4f6f5">Šimon Blatoň</text>
+<text id="jmeno" x="7" y="27" font-family="'Krona One', sans-serif" font-size="4.6" letter-spacing="-0.14" fill="#f4f6f5">Šimon Blatoń</text>
 <rect id="jmeno-linka" x="7" y="27.86" width="39.3" height="0.35" fill="#c8ff3d"/>
 <text id="role" x="7" y="32.6" font-family="Montserrat, sans-serif" font-size="2.5" font-weight="400" fill="#8a918f"><tspan x="7">Spoluzakladatel · Back-end &amp; bezpečnost</tspan></text>
 <text id="kontakt" x="7" y="41.6" font-family="Montserrat, sans-serif" font-size="2.5" font-weight="500" fill="#f4f6f5"><tspan x="7">simon@qomiq.cz</tspan><tspan x="7" dy="3.38">qomiq.cz</tspan><tspan x="7" dy="3.38">linkedin.com/in/simonblaton</tspan></text>
