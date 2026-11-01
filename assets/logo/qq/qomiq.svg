@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 2312 506" fill="none" role="img" aria-label="QOMIQ">
+  <g fill="none" stroke="currentColor" stroke-width="80">
+      <g transform="translate(245 245)"><circle r="204.5"/><path d="M108.3 118.3 207.1 226.1"/></g>
+      <circle cx="813.4" cy="245" r="204.5"/>
+      <g transform="translate(2058.6 245)"><circle r="204.5"/><path d="M108.3 118.3 207.1 226.1"/></g>
+    </g>
+    <path fill="currentColor" transform="translate(1136.8 0)" d="M0 489.5V.5h87.1L220 214.2 352.9.5H440v489h-80V140.6L220 365.8 80 140.6v348.9z"/>
+    <path fill="currentColor" transform="translate(1655.2 0)" d="M0 .5h80v489H0z"/>
+</svg>

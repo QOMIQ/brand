@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627">
+<title>QOMIQ šablona: LinkedIn příspěvek, projekt (1200×627)</title>
+<rect id="pozadi" width="1200" height="627" fill="#050607"/>
+<g id="stitek"><circle cx="77.9" cy="105.88" r="5.9" fill="#c8ff3d"/><text x="101.48" y="112" font-family="Montserrat, sans-serif" font-size="17" font-weight="600" letter-spacing="3.4" fill="#8a918f">PROJEKT</text></g>
+<text id="nadpis-1" x="72" y="222" font-family="'Krona One', sans-serif" font-size="50" letter-spacing="-1.5" fill="#f4f6f5">Lobfit</text>
+<text id="text" x="72" y="284" font-family="Montserrat, sans-serif" font-size="25" font-weight="400" fill="#8a918f"><tspan x="72">Systém pro správu</tspan><tspan x="72" dy="36.25">soukromého fitka</tspan></text>
+<text id="odkaz" x="72" y="400" font-family="Montserrat, sans-serif" font-size="22" font-weight="500" fill="#8a918f">lobfit.cz</text>
+<text id="web" x="72" y="555" font-family="Montserrat, sans-serif" font-size="22" font-weight="600" fill="#f4f6f5">qomiq.cz</text>
+<g id="znacka" transform="translate(492 102) scale(0.07965900000000001) translate(-503.5 -500)">
+    <mask id="znacka-a" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000"><rect width="1000" height="1000" fill="#fff"/><path d="M707.3 570.8A204.5 204.5 0 0 1 473.3 553.7" fill="none" stroke="#000" stroke-width="128"/></mask>
+    <mask id="znacka-b" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000"><rect width="1000" height="1000" fill="#fff"/><path d="M283.7 376.8A204.5 204.5 0 0 1 517.7 393.9" fill="none" stroke="#000" stroke-width="128"/></mask>
+    <g fill="none" stroke="#f4f6f5" stroke-width="80" transform="translate(8 22)">
+      <g mask="url(#znacka-a)"><circle cx="388.5" cy="552.4" r="204.5"/><path d="M496.8 670.7 595.6 778.5"/></g>
+      <g mask="url(#znacka-b)"><circle cx="602.5" cy="395.2" r="204.5"/><path d="M710.8 513.5 809.6 621.3"/></g>
+    </g>
+  </g>
+<clipPath id="obrazek-orez"><rect x="560" y="72" width="568" height="483" rx="20"/></clipPath>
+<image id="obrazek" href="../obrazky/lobfit.jpg" x="560" y="72" width="568" height="483" preserveAspectRatio="xMidYMin slice" clip-path="url(#obrazek-orez)"/>
+<rect id="obrazek-ramecek" x="561" y="73" width="566" height="481" rx="19" fill="none" stroke="#fff" stroke-opacity="0.1" stroke-width="2"/>
+<g id="voditka" display="none" fill="none" stroke="#ff3df5" stroke-width="2" stroke-dasharray="7.8 5.2">
+  <rect x="560" y="72" width="568" height="483" fill="#ff3df5" fill-opacity="0"/><rect x="564" y="47" width="125.2" height="25" rx="4.33" fill="#ff3df5" stroke="none"/><text x="572" y="62" font-family="Montserrat, sans-serif" font-size="13" font-weight="700" fill="#000" stroke="none">obrázek 568×483</text>
+  <rect x="72" y="160" width="440" height="260" fill="#ff3df5" fill-opacity="0"/><rect x="76" y="135" width="270.8" height="25" rx="4.33" fill="#ff3df5" stroke="none"/><text x="84" y="150" font-family="Montserrat, sans-serif" font-size="13" font-weight="700" fill="#000" stroke="none">název max. ~14 znaků, popis 2 řádky</text>
+</g>
+</svg>

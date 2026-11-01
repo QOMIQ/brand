@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+<title>QOMIQ šablona: Instagram příspěvek, čtverec (1080×1080)</title>
+<rect id="pozadi" width="1080" height="1080" fill="#050607"/>
+<image id="chrom" href="../../logo/qq/qq-chrom.png" x="375.48" y="398.25" width="1013.57" height="1013.57"/>
+<g id="stitek"><circle cx="95.63" cy="124.08" r="7.63" fill="#c8ff3d"/><text x="126.15" y="132" font-family="Montserrat, sans-serif" font-size="22" font-weight="600" letter-spacing="4.4" fill="#8a918f">WEB STUDIO · OSTRAVA</text></g>
+<text id="nadpis-1" x="88" y="300" font-family="'Krona One', sans-serif" font-size="76" letter-spacing="-2.28" fill="#f4f6f5">Stavíme weby</text>
+<text id="nadpis-2" x="88" y="386" font-family="'Krona One', sans-serif" font-size="76" letter-spacing="-2.28" fill="#f4f6f5">a aplikace.</text>
+<text id="nadpis-zvyrazneni" x="88" y="478" font-family="Montserrat, sans-serif" font-size="84" font-weight="300" font-style="italic" letter-spacing="-2.52" fill="#f4f6f5">Pořádně.</text>
+  <rect id="nadpis-zvyrazneni-linka" x="88" y="486.4" width="360.92" height="5.88" fill="#c8ff3d"/>
+<text id="web" x="88" y="992" font-family="Montserrat, sans-serif" font-size="28" font-weight="600" fill="#f4f6f5">qomiq.cz</text>
+<g id="voditka" display="none" fill="none" stroke="#ff3df5" stroke-width="3" stroke-dasharray="13.2 8.8">
+  <rect x="88" y="88" width="904" height="904" fill="#ff3df5" fill-opacity="0"/><rect x="92" y="1000" width="114.56" height="34" rx="7.33" fill="#ff3df5" stroke="none"/><text x="100" y="1024" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#000" stroke="none">okraj 88</text>
+  <rect x="88" y="210" width="760" height="300" fill="#ff3df5" fill-opacity="0"/><rect x="92" y="176" width="447.2" height="34" rx="7.33" fill="#ff3df5" stroke="none"/><text x="100" y="200" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#000" stroke="none">nadpis: max. 3 řádky po ~12 znacích</text>
+</g>
+</svg>

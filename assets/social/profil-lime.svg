@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+<title>QOMIQ: profilový obrázek, limetková varianta (1080×1080, ořez do kruhu)</title>
+<rect id="pozadi" width="1080" height="1080" fill="#c8ff3d"/>
+<g id="qq" transform="translate(540 545) scale(1.052632) translate(-503.5 -500)">
+    <mask id="qq-a" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000"><rect width="1000" height="1000" fill="#fff"/><path d="M707.3 570.8A204.5 204.5 0 0 1 473.3 553.7" fill="none" stroke="#000" stroke-width="136"/></mask>
+    <mask id="qq-b" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000"><rect width="1000" height="1000" fill="#fff"/><path d="M283.7 376.8A204.5 204.5 0 0 1 517.7 393.9" fill="none" stroke="#000" stroke-width="136"/></mask>
+    <g fill="none" stroke="#050607" stroke-width="88" transform="translate(8 22)">
+      <g mask="url(#qq-a)"><circle cx="388.5" cy="552.4" r="204.5"/><path d="M496.8 670.7 595.6 778.5"/></g>
+      <g mask="url(#qq-b)"><circle cx="602.5" cy="395.2" r="204.5"/><path d="M710.8 513.5 809.6 621.3"/></g>
+    </g>
+  </g>
+<g id="voditka" display="none" fill="none" stroke="#ff3df5" stroke-width="3" stroke-dasharray="13.2 8.8">
+  <circle cx="540" cy="540" r="540" fill="#ff3df5" fill-opacity="0"/><rect x="4" y="4" width="200.8" height="34" rx="7.33" fill="#ff3df5" stroke="none"/><text x="12" y="28" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#000" stroke="none">ořez Instagramu</text>
+  <circle cx="540" cy="540" r="430" fill="#ff3df5" fill-opacity="0"/><rect x="334" y="114" width="176.16" height="34" rx="7.33" fill="#ff3df5" stroke="none"/><text x="342" y="138" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#000" stroke="none">značka uvnitř</text>
+</g>
+</svg>
