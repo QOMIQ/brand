@@ -1,5 +1,6 @@
 # Composer (Filament tema v projektech) tyhle soubory nepotrebuje.
 /assets/social export-ignore
+/assets/tisk export-ignore
 /assets/fonts export-ignore
 /assets/logo/qq/qq-chrom.png export-ignore
 /scripts export-ignore

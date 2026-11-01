@@ -64,7 +64,7 @@ takže se nic neusekne.
 ## Export
 
 ```
-render-social.bat                          všechna SVG v assets/social
+render-social.bat                          všechna SVG v assets/social a assets/tisk
 render-social.bat cesta\k\prispevek.svg    jen vybrané
 ```
 
@@ -78,6 +78,6 @@ Po změně SVG v repu vždy přegenerovat a commitnout i PNG.
 
 ## Balíček
 
-`assets/social`, `assets/fonts`, `scripts`, `docs` a chrom render jsou
+`assets/social`, `assets/tisk`, `assets/fonts`, `scripts`, `docs` a chrom render jsou
 v `.gitattributes` jako `export-ignore`: Composer je do projektů (Filament
 téma) nestahuje.

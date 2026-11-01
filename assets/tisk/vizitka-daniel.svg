@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96mm" height="56mm" viewBox="0 0 96 56" data-export-pdf>
+<title>QOMIQ vizitka: Daniel Poledník (90×50 mm + 3 mm spadávka)</title>
+<rect id="pozadi" width="96" height="56" fill="#050607"/>
+<g id="wordmark" transform="translate(7 7.4) scale(0.006939)"><g fill="none" stroke="#f4f6f5" stroke-width="80">
+      <g transform="translate(245 245)"><circle r="204.5"/><path d="M108.3 118.3 207.1 226.1"/></g>
+      <circle cx="813.4" cy="245" r="204.5"/>
+      <g transform="translate(2058.6 245)"><circle r="204.5"/><path d="M108.3 118.3 207.1 226.1"/></g>
+    </g>
+    <path fill="#f4f6f5" transform="translate(1136.8 0)" d="M0 489.5V.5h87.1L220 214.2 352.9.5H440v489h-80V140.6L220 365.8 80 140.6v348.9z"/>
+    <path fill="#f4f6f5" transform="translate(1655.2 0)" d="M0 .5h80v489H0z"/></g>
+<text id="jmeno" x="7" y="27" font-family="'Krona One', sans-serif" font-size="4.6" letter-spacing="-0.14" fill="#f4f6f5">Daniel Poledník</text>
+<rect id="jmeno-linka" x="7" y="27.86" width="44.32" height="0.35" fill="#c8ff3d"/>
+<text id="role" x="7" y="32.6" font-family="Montserrat, sans-serif" font-size="2.5" font-weight="400" fill="#8a918f"><tspan x="7">Spoluzakladatel · Front-end &amp; UI/UX</tspan></text>
+<text id="kontakt" x="7" y="41.6" font-family="Montserrat, sans-serif" font-size="2.5" font-weight="500" fill="#f4f6f5"><tspan x="7">daniel@qomiq.cz</tspan><tspan x="7" dy="3.38">qomiq.cz</tspan><tspan x="7" dy="3.38">linkedin.com/in/danielpolednik</tspan></text>
+<g id="voditka" display="none" fill="none" stroke="#ff3df5" stroke-width="0.12" stroke-dasharray="0.96 0.64">
+  <rect x="3" y="3" width="90" height="50" fill="#ff3df5" fill-opacity="0"/><rect x="3.53" y="49.93" width="13.78" height="3.2" rx="0.53" fill="#ff3df5" stroke="none"/><text x="4.6" y="51.8" font-family="Montserrat, sans-serif" font-size="1.6" font-weight="700" fill="#000" stroke="none">ořez 90×50 mm</text>
+  <rect x="7" y="7" width="82" height="42" fill="#ff3df5" fill-opacity="0"/><rect x="70.03" y="44.13" width="13.78" height="3.2" rx="0.53" fill="#ff3df5" stroke="none"/><text x="71.1" y="46" font-family="Montserrat, sans-serif" font-size="1.6" font-weight="700" fill="#000" stroke="none">bezpečná zóna</text>
+</g>
+</svg>
