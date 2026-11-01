@@ -5,7 +5,7 @@
 | Soubor | Co |
 |--------|----|
 | `vizitka-daniel.*` | Daniel Poledník, přední strana |
-| `vizitka-simon.*` | Šimon Blatoň, přední strana |
+| `vizitka-simon.*` | Šimon Blatoń, přední strana |
 | `vizitka-zadni.*` | zadní strana (limetková, značka QQ, QOMIQ.CZ) |
 
 Ke každé: `.svg` zdroj, `.pdf` do tiskárny, `.png` náhled, `-voditka.png`
