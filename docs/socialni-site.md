@@ -74,10 +74,38 @@ písma bere z `assets/fonts/`, takže nemusí být nainstalovaná. Velikost PNG 
 `width`/`height` SVG × `data-export-scale` (bannery 2). SVG se skupinou
 `voditka` dostane navíc `-voditka.png`.
 
-Po změně SVG v repu vždy přegenerovat a commitnout i PNG.
+Po změně SVG v repu vždy přegenerovat a commitnout i PNG. Commitnout jen
+soubory, které se změnou opravdu změnily; přeměřené setiny px v ostatních
+SVG/PNG vrátit (`git restore`).
+
+## Story (video)
+
+`story-novy-web.mp4` (1080×1920, 16 s, H.264 bez zvuku): upoutávka na nový
+qomiq.cz. Statická verze `story-novy-web.png`.
+
+- Úvod jako logo na webu: uprostřed spojené QQ, Q se rozjedou a naskočí „OMI“
+  (časy a křivky z `global.css` webu), hotový wordmark odjede nahoru. Pak se
+  prolne chrom smyčka a zespodu vyjede text.
+- Nahoře ~200 px a dole ~280 px překrývá Instagram (lišta, pole pro odpověď),
+  tam nic důležitého. Link sticker přidat v Instagramu pod text (zóna ve
+  `-voditka.png`).
+
+Nová story = kopie SVG, upravit text, pak:
+
+```
+render-story.bat assets\social\story-novy-web.svg [délka v s]
+```
+
+Skript vezme z SVG: `<g data-intro="wordmark">` (úvod s logem, cílové místo =
+transformace wordmarku), `<image id="chrom">` (sem dá smyčku
+`assets/logo/qq/qq-loop.mp4`, stejný ořez jako `qq-chrom.png`) a
+`<g data-rise="<s>">` (vyjede zespodu; čas od konce úvodu). Potřebuje ffmpeg
+(v PATH nebo proměnná `FFMPEG`). Pozadí videa je barva podkladu smyčky, ne
+`#050607` ze SVG: tmavé odstíny se v YUV zaokrouhlí jinak a na hraně smyčky
+by byl vidět šev.
 
 ## Balíček
 
-`assets/social`, `assets/tisk`, `assets/fonts`, `scripts`, `docs` a chrom render jsou
+`assets/social`, `assets/tisk`, `assets/fonts`, `scripts`, `docs`, chrom render a smyčka jsou
 v `.gitattributes` jako `export-ignore`: Composer je do projektů (Filament
 téma) nestahuje.

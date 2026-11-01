@@ -3,6 +3,8 @@
 /assets/tisk export-ignore
 /assets/fonts export-ignore
 /assets/logo/qq/qq-chrom.png export-ignore
+/assets/logo/qq/qq-loop.mp4 export-ignore
 /scripts export-ignore
 /docs export-ignore
 /render-social.bat export-ignore
+/render-story.bat export-ignore
