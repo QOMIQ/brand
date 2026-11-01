@@ -5,7 +5,7 @@
 <g id="stitek"><circle cx="77.9" cy="105.88" r="5.9" fill="#c8ff3d"/><text x="101.48" y="112" font-family="Montserrat, sans-serif" font-size="17" font-weight="600" letter-spacing="3.4" fill="#8a918f">PROCES</text></g>
 <text id="nadpis-1" x="72" y="232" font-family="'Krona One', sans-serif" font-size="56" letter-spacing="-1.68" fill="#f4f6f5">Čtyři kroky.</text>
 <text id="nadpis-zvyrazneni" x="72" y="304" font-family="Montserrat, sans-serif" font-size="60" font-weight="300" font-style="italic" letter-spacing="-1.8" fill="#f4f6f5">Bez zbytečností.</text>
-  <rect id="nadpis-zvyrazneni-linka" x="72" y="310" width="449.42" height="4.2" fill="#c8ff3d"/>
+  <rect id="nadpis-zvyrazneni-linka" x="72" y="310" width="449.44" height="4.2" fill="#c8ff3d"/>
 <text id="text" x="72" y="400" font-family="Montserrat, sans-serif" font-size="25" font-weight="400" fill="#8a918f"><tspan x="72">Od prvního kontaktu po spuštění a dál.</tspan><tspan x="72" dy="36.25">Vždy víte, kde jsme a co se děje.</tspan></text>
 <text id="web" x="72" y="555" font-family="Montserrat, sans-serif" font-size="22" font-weight="600" fill="#f4f6f5">qomiq.cz</text>
 <g id="voditka" display="none" fill="none" stroke="#ff3df5" stroke-width="2" stroke-dasharray="7.8 5.2">

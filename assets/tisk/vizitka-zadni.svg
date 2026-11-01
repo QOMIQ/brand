@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96mm" height="56mm" viewBox="0 0 96 56" data-export-pdf>
+<title>QOMIQ vizitka: zadní strana (90×50 mm + 3 mm spadávka)</title>
+<rect id="pozadi" width="96" height="56" fill="#c8ff3d"/>
+<g id="qq" transform="translate(48 26) scale(0.038407) translate(-503.5 -500)">
+    <mask id="qq-a" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000"><rect width="1000" height="1000" fill="#fff"/><path d="M707.3 570.8A204.5 204.5 0 0 1 473.3 553.7" fill="none" stroke="#000" stroke-width="136"/></mask>
+    <mask id="qq-b" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="1000"><rect width="1000" height="1000" fill="#fff"/><path d="M283.7 376.8A204.5 204.5 0 0 1 517.7 393.9" fill="none" stroke="#000" stroke-width="136"/></mask>
+    <g fill="none" stroke="#050607" stroke-width="88" transform="translate(8 22)">
+      <g mask="url(#qq-a)"><circle cx="388.5" cy="552.4" r="204.5"/><path d="M496.8 670.7 595.6 778.5"/></g>
+      <g mask="url(#qq-b)"><circle cx="602.5" cy="395.2" r="204.5"/><path d="M710.8 513.5 809.6 621.3"/></g>
+    </g>
+  </g>
+<text id="web" x="48" y="47.6" font-family="Montserrat, sans-serif" font-size="2.5" font-weight="600" letter-spacing="0.5" fill="#050607" text-anchor="middle">QOMIQ.CZ</text>
+<g id="voditka" display="none" fill="none" stroke="#ff3df5" stroke-width="0.12" stroke-dasharray="0.96 0.64">
+  <rect x="3" y="3" width="90" height="50" fill="#ff3df5" fill-opacity="0"/><rect x="3.53" y="49.93" width="13.78" height="3.2" rx="0.53" fill="#ff3df5" stroke="none"/><text x="4.6" y="51.8" font-family="Montserrat, sans-serif" font-size="1.6" font-weight="700" fill="#000" stroke="none">ořez 90×50 mm</text>
+  <rect x="7" y="7" width="82" height="42" fill="#ff3df5" fill-opacity="0"/><rect x="70.03" y="44.13" width="13.78" height="3.2" rx="0.53" fill="#ff3df5" stroke="none"/><text x="71.1" y="46" font-family="Montserrat, sans-serif" font-size="1.6" font-weight="700" fill="#000" stroke="none">bezpečná zóna</text>
+</g>
+</svg>
