@@ -1,11 +1,13 @@
-// Export podkladů pro sociální sítě: každé SVG v assets/social → PNG vedle něj.
+// Export podkladů: každé SVG v assets/social a assets/tisk → PNG vedle něj.
 // Kreslí headless Chrome (stejný renderer jako web), písma bere z assets/fonts,
 // takže nemusí být nainstalovaná. Návod: docs/socialni-site.md.
 //
 //   node scripts/render-social.mjs                 všechna SVG
 //   node scripts/render-social.mjs <soubor.svg>…   jen vybraná
 //
-// Velikost PNG = width/height SVG × data-export-scale (výchozí 1).
+// Velikost PNG = width/height SVG × data-export-scale (výchozí 1). SVG v milimetrech
+// (tisk) jde do PNG náhledu 4× (~380 dpi) a s atributem data-export-pdf i do PDF
+// stejného rozměru (vektor, písma vložená). Do tiskárny jde PDF.
 // SVG se skupinou id="voditka" dostane navíc <název>-voditka.png s vyznačenými zónami.
 
 import { execFileSync } from 'node:child_process';
@@ -48,17 +50,28 @@ export function findChrome() {
 }
 
 export function size(svg) {
-  const attr = (name) => Number(svg.match(new RegExp(`<svg[^>]*\\s${name}="([\\d.]+)"`))?.[1]);
-  return { width: attr('width'), height: attr('height'), scale: attr('data-export-scale') || 1 };
+  const attr = (name) => svg.match(new RegExp(`<svg[^>]*\\s${name}="([\\d.]+)(mm)?"`));
+  const [, w, mm] = attr('width'), [, h] = attr('height');
+  const scale = Number(attr('data-export-scale')?.[1]) || (mm ? 4 : 1); // mm: náhled ~380 dpi
+  const px = (v) => (mm ? Math.round((v * 96) / 25.4) : Number(v)); // CSS px
+  return { width: px(w), height: px(h), scale, mm: mm ? { width: w, height: h } : null, pdf: /<svg[^>]*\sdata-export-pdf/.test(svg) };
 }
 
 // SVG vložené do HTML: relativní cesty k obrázkům platí vůči složce SVG (<base>).
-export function html(svgPath, { guides = false, script = '' } = {}) {
-  const svg = readFileSync(svgPath, 'utf8').replace(/^<\?xml[^>]*>\s*/, '');
+// page = rozměr v mm pro tisk do PDF, px = rozměr screenshotu (mm zaokrouhlené na celé px,
+// proto preserveAspectRatio none: zkreslení < 0,2 %, žádný průhledný proužek u okraje).
+export function html(svgPath, { guides = false, script = '', page = null, px = null } = {}) {
+  let svg = readFileSync(svgPath, 'utf8').replace(/^<\?xml[^>]*>\s*/, '');
+  if (px) svg = svg.replace('<svg ', '<svg preserveAspectRatio="none" ');
   const base = pathToFileURL(dirname(svgPath) + '/').href;
+  // Chrome zaokrouhlí stránku PDF o ±0,1 mm (ve spadávce), okraj navíc má barvu pozadí karty.
+  const fill = svg.match(/id="pozadi"[^>]*fill="([^"]+)"/)?.[1] ?? 'transparent';
+  const box = page
+    ? `@page{size:${page.width}mm ${page.height}mm;margin:0}svg{width:${page.width}mm;height:${page.height}mm}html{background:${fill};print-color-adjust:exact;-webkit-print-color-adjust:exact}`
+    : px ? `svg{width:${px.width}px;height:${px.height}px}` : '';
   return `<!doctype html><html><head><meta charset="utf-8"><base href="${base}"><style>
 ${fontFaces}
-html,body{margin:0;background:transparent}svg{display:block}
+html,body{margin:0;background:transparent;overflow:hidden}svg{display:block}${box}
 ${guides ? '#voditka{display:inline!important}' : ''}
 </style></head><body>${svg}${script}</body></html>`;
 }
@@ -80,7 +93,7 @@ export function chrome(args, page) {
 }
 
 export function render(svgPath) {
-  const { width, height, scale } = size(readFileSync(svgPath, 'utf8'));
+  const { width, height, scale, mm, pdf } = size(readFileSync(svgPath, 'utf8'));
   const outputs = [[svgPath.replace(/\.svg$/, '.png'), false]];
   if (readFileSync(svgPath, 'utf8').includes('id="voditka"')) outputs.push([svgPath.replace(/\.svg$/, '-voditka.png'), true]);
   for (const [png, guides] of outputs) {
@@ -89,8 +102,13 @@ export function render(svgPath) {
       `--force-device-scale-factor=${scale}`,
       '--default-background-color=00000000',
       `--screenshot=${png}`,
-    ], html(svgPath, { guides }));
-    console.log(`${png.slice(root.length + 1)}  ${width * scale}×${height * scale}`);
+    ], html(svgPath, { guides, px: { width, height } }));
+    console.log(`${png.slice(root.length + 1)}  ${Math.round(width * scale)}×${Math.round(height * scale)}`);
+  }
+  if (pdf && mm) {
+    const out = svgPath.replace(/\.svg$/, '.pdf');
+    chrome([`--print-to-pdf=${out}`, '--no-pdf-header-footer'], html(svgPath, { page: mm }));
+    console.log(`${out.slice(root.length + 1)}  ${mm.width}×${mm.height} mm`);
   }
 }
 
@@ -100,6 +118,6 @@ function svgsIn(dir) {
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const files = process.argv.length > 2 ? process.argv.slice(2).map((f) => resolve(f)) : svgsIn(join(root, 'assets/social'));
+  const files = process.argv.length > 2 ? process.argv.slice(2).map((f) => resolve(f)) : ['assets/social', 'assets/tisk'].flatMap((d) => svgsIn(join(root, d)));
   files.forEach(render);
 }

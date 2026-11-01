@@ -12,9 +12,9 @@
 <text id="nadpis-1" x="600" y="178" font-family="'Krona One', sans-serif" font-size="42" letter-spacing="-1.26" fill="#f4f6f5">Stavíme weby</text>
 <text id="nadpis-2" x="600" y="228" font-family="'Krona One', sans-serif" font-size="42" letter-spacing="-1.26" fill="#f4f6f5">a aplikace.</text>
 <text id="nadpis-zvyrazneni" x="600" y="284" font-family="Montserrat, sans-serif" font-size="46" font-weight="300" font-style="italic" letter-spacing="-1.38" fill="#f4f6f5">Pořádně.</text>
-  <rect id="nadpis-zvyrazneni-linka" x="600" y="288.6" width="197.66" height="3.22" fill="#c8ff3d"/>
+  <rect id="nadpis-zvyrazneni-linka" x="600" y="288.6" width="197.61" height="3.22" fill="#c8ff3d"/>
 <g id="stitek"><circle cx="605.21" cy="340.6" r="5.21" fill="#c8ff3d"/><text x="626.01" y="346" font-family="Montserrat, sans-serif" font-size="15" font-weight="600" letter-spacing="3" fill="#8a918f">WEB STUDIO · OSTRAVA · QOMIQ.CZ</text></g>
-<g id="voditka" display="none" fill="none" stroke="#ff3df5" stroke-width="2" stroke-dasharray="7.199999999999999 4.800000000000001">
+<g id="voditka" display="none" fill="none" stroke="#ff3df5" stroke-width="2" stroke-dasharray="7.2 4.8">
   <circle cx="199" cy="396" r="152" fill="#ff3df5" fill-opacity="0.15"/><rect x="51" y="224" width="116.8" height="24" rx="4" fill="#ff3df5" stroke="none"/><text x="59" y="238" font-family="Montserrat, sans-serif" font-size="12" font-weight="700" fill="#000" stroke="none">fotka (počítač)</text>
   <circle cx="270" cy="396" r="202" fill="#ff3df5" fill-opacity="0"/><rect x="72" y="164" width="103.36" height="24" rx="4" fill="#ff3df5" stroke="none"/><text x="80" y="178" font-family="Montserrat, sans-serif" font-size="12" font-weight="700" fill="#000" stroke="none">fotka (mobil)</text>
   <rect x="560" y="40" width="600" height="320" fill="#ff3df5" fill-opacity="0"/><rect x="564" y="16" width="83.2" height="24" rx="4" fill="#ff3df5" stroke="none"/><text x="572" y="30" font-family="Montserrat, sans-serif" font-size="12" font-weight="700" fill="#000" stroke="none">text: tady</text>

@@ -14,7 +14,7 @@
 <text id="nadpis-1" x="88" y="650" font-family="'Krona One', sans-serif" font-size="74" letter-spacing="-2.22" fill="#f4f6f5">Bezpečnost</text>
 <text id="nadpis-2" x="88" y="732" font-family="'Krona One', sans-serif" font-size="74" letter-spacing="-2.22" fill="#f4f6f5">není feature.</text>
 <text id="nadpis-zvyrazneni" x="88" y="820" font-family="Montserrat, sans-serif" font-size="80" font-weight="300" font-style="italic" letter-spacing="-2.4" fill="#f4f6f5">Je to základ.</text>
-  <rect id="nadpis-zvyrazneni-linka" x="88" y="828" width="460.92" height="5.6" fill="#c8ff3d"/>
+  <rect id="nadpis-zvyrazneni-linka" x="88" y="828" width="460.93" height="5.6" fill="#c8ff3d"/>
 <text id="text" x="88" y="938" font-family="Montserrat, sans-serif" font-size="33" font-weight="400" fill="#8a918f"><tspan x="88">Každý projekt před spuštěním projde</tspan><tspan x="88" dy="47.85">pohledem útočníka. Penetrační testy,</tspan><tspan x="88" dy="47.85">code review, audit závislostí.</tspan></text>
 <path id="linka" d="M88 1172H992" stroke="#fff" stroke-opacity="0.1" stroke-width="2"/>
 <text id="web" x="88" y="1250" font-family="Montserrat, sans-serif" font-size="28" font-weight="600" fill="#f4f6f5">qomiq.cz</text>
