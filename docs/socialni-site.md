@@ -64,7 +64,7 @@ takže se nic neusekne.
 ## Export
 
 ```
-render-social.bat                          všechna SVG v assets/social a assets/tisk
+render-social.bat                          všechna SVG v assets/social, assets/tisk a assets/email
 render-social.bat cesta\k\prispevek.svg    jen vybrané
 ```
 
@@ -106,6 +106,6 @@ by byl vidět šev.
 
 ## Balíček
 
-`assets/social`, `assets/tisk`, `assets/fonts`, `scripts`, `docs`, chrom render a smyčka jsou
+`assets/social`, `assets/tisk`, `assets/email`, `assets/fonts`, `scripts`, `docs`, chrom render a smyčka jsou
 v `.gitattributes` jako `export-ignore`: Composer je do projektů (Filament
 téma) nestahuje.

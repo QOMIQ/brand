@@ -1,4 +1,4 @@
-// Export podkladů: každé SVG v assets/social a assets/tisk → PNG vedle něj.
+// Export podkladů: každé SVG v assets/social, assets/tisk a assets/email → PNG vedle něj.
 // Kreslí headless Chrome (stejný renderer jako web), písma bere z assets/fonts,
 // takže nemusí být nainstalovaná. Návod: docs/socialni-site.md.
 //
@@ -118,6 +118,6 @@ function svgsIn(dir) {
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const files = process.argv.length > 2 ? process.argv.slice(2).map((f) => resolve(f)) : ['assets/social', 'assets/tisk'].flatMap((d) => svgsIn(join(root, d)));
+  const files = process.argv.length > 2 ? process.argv.slice(2).map((f) => resolve(f)) : ['assets/social', 'assets/tisk', 'assets/email'].flatMap((d) => svgsIn(join(root, d)));
   files.forEach(render);
 }
