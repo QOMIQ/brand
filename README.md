@@ -8,6 +8,7 @@ assets/logo/qq/     značka QQ, wordmark QOMIQ, limetková dlaždice, 3D chrom r
 assets/logo/        qomiq-symbol.svg, qomiq-wordmark.svg, favicon.svg (staré logo, Filament)
 assets/social/      LinkedIn bannery, profilovky, šablony příspěvků (SVG + PNG)
 assets/tisk/        vizitky (SVG + PDF do tiskárny + PNG náhled)
+assets/email/       e-mailový podpis (HTML pro Daniela a Šimona, limetková dlaždice)
 assets/fonts/       Krona One, Montserrat (woff2, OFL) pro export šablon
 render-social.bat   export SVG → PNG / PDF (scripts/render-social.mjs)
 render-story.bat    story video z SVG (scripts/render-story.mjs, potřebuje ffmpeg)
@@ -23,6 +24,7 @@ src/                QomiqBrand (Filament plugin), Palette, Logo
   písmo, logo, co je ještě ve starém vzhledu
 - [docs/socialni-site.md](docs/socialni-site.md): bannery, profilovky, šablony
   příspěvků, story video, jak udělat nový příspěvek a export
+- [docs/email-podpis.md](docs/email-podpis.md): e-mailový podpis, jak ho vložit do Gmailu, Apple Mailu a Outlooku
 - [docs/vizitky.md](docs/vizitky.md): vizitky, rozměr, spadávka, co říct tiskárně
 
 Zdroj podkladů Filament tématu: [QOMIQ/web](https://github.com/QOMIQ/web) (`app/globals.css`,
