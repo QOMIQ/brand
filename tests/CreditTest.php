@@ -13,12 +13,17 @@ function creditFile(string $file): string
     return (string) file_get_contents(dirname(__DIR__).'/credit/'.$file);
 }
 
-/** @return list<string> */
-function symbolPaths(string $source): array
+/** Tvary symbolu (d cest a kružnice) bez ohledu na zápis atributů (JSX/HTML). @return list<string> */
+function symbolShapes(string $source): array
 {
-    preg_match_all('/<path d="([^"]+)"/', $source, $m);
+    preg_match_all('/ d="[^"]+"|<circle [^>\/]+/', $source, $m);
 
-    return $m[1];
+    return array_values(array_unique(array_map('trim', $m[0])));
+}
+
+function creditSource(string $file): string
+{
+    return $file === 'credit.blade.php' ? view('qomiq-brand::credit')->render() : creditFile($file);
 }
 
 it('blade credit ma texty a odkazy pro cs i en', function (?string $lang, string $text, string $brand, string $href) {
@@ -59,13 +64,20 @@ it('React a HTML credit maji stejne texty a odkazy jako Blade', function (string
         ->not->toContain('qomiq.cz/Qomiq.svg');
 })->with(['QomiqCredit.jsx', 'qomiq-credit.html']);
 
-it('symbol v React a HTML creditu odpovida assets/logo', function (string $file) {
-    $asset = (string) file_get_contents(Logo::path('qomiq-symbol.svg'));
-    $paths = symbolPaths(creditFile($file));
+it('React, HTML i Blade credit maji stejny aktualni symbol z qomiq.cz', function (string $file) {
+    $source = creditSource($file);
+    $blade = symbolShapes(creditSource('credit.blade.php'));
 
-    // HTML má cs i en variantu, každá se symbolem.
-    expect(array_values(array_unique($paths)))->toBe(symbolPaths($asset));
-})->with(['QomiqCredit.jsx', 'qomiq-credit.html']);
+    // Dvě Q (kružnice + nožička) a dvě masky překryvu. HTML má cs i en variantu.
+    expect($blade)->toHaveCount(6)
+        ->and(symbolShapes($source))->toBe($blade)
+        ->and($source)->toContain('viewBox="120 120 760 760"')
+        ->toContain('stroke="currentColor"')
+        ->toContain('id="qomiq-credit-mask-a"')->toContain('url(#qomiq-credit-mask-a)')
+        ->toContain('id="qomiq-credit-mask-b"')->toContain('url(#qomiq-credit-mask-b)')
+        ->not->toMatch('/id="[ab]"/')
+        ->not->toContain('17.386 17.3 65.2 65.2');
+})->with(['QomiqCredit.jsx', 'qomiq-credit.html', 'credit.blade.php']);
 
 it('styl creditu dedi barvu a drzi klidovou pruhlednost 0.7', function () {
     $css = creditFile('qomiq-credit.css');

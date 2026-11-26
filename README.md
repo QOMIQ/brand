@@ -91,12 +91,21 @@ Integraci pro agenty popisuje skill [`skills/qomiq-footer`](skills/qomiq-footer/
   (label-content-name-mismatch). Obojí shodilo Lighthouse, zjištěno
   v QOMIQ/eshop#48.
 
-**Symbol inline, ne `<img src="https://qomiq.cz/Qomiq.svg">`:** symbol
-z `assets/logo/qomiq-symbol.svg` je přímo v komponentě. Bere barvu z textu
-(`currentColor`), takže je vidět i na tmavé patičce (obrázek má pevnou
-tmavou barvu), a stránka nedělá požadavek na cizí doménu. Raw soubory
-z GitHubu se jako `<img>` nezobrazí (`text/plain`). Shodu s `assets/` hlídá
-`tests/CreditTest.php`, při změně loga se upraví i `credit/`.
+**Symbol inline, ne `<img src="https://qomiq.cz/Qomiq.svg">`:** aktuální
+symbol z `https://qomiq.cz/Qomiq.svg` (dvě propletená Q) je přímo
+v komponentě. Bere barvu z textu (`stroke="currentColor"`), takže je vidět
+i na tmavé patičce (obrázek má pevnou tmavou barvu), a stránka nedělá
+požadavek na cizí doménu. Raw soubory z GitHubu se jako `<img>` nezobrazí
+(`text/plain`). Masky mají id s prefixem `qomiq-credit-mask-`, ať nekolidují
+s id na stránce projektu. Blade credit bere symbol z `assets/logo/qomiq-symbol.svg`
+(`Logo::symbol(…, idPrefix: 'qomiq-credit')`), React a HTML ho mají inline, aby
+byly bez závislostí. Shodu všech tří hlídá `tests/CreditTest.php`, při změně
+loga se upraví `assets/logo/` i `credit/`.
+
+Masky jen vyřezávají mezeru v překřížení obou Q. Pás masky přesahuje řez
+o ~18° na každou stranu, takže na koncích řezu nezůstávají tečky ani vlásečnice
+(ověřeno v Chrome na 14, 32, 64 a 512 px, světlé i tmavé pozadí). Favicon má
+tah 88 a masku 136 jako limetková dlaždice webu, kvůli čitelnosti na 16 px.
 
 Písmo Montserrat (`--qomiq-font`), ne Mont z qomiq.cz (DEMO licence, viz výš).
 

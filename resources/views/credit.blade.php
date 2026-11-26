@@ -11,7 +11,7 @@
 @endphp
 <a href="{{ $credit['href'] }}" target="_blank" rel="noopener noreferrer" class="qomiq-credit">
     <span class="qomiq-credit__inner">
-        {{ \Qomiq\Brand\Logo::symbol('qomiq-credit__mark', decorative: true) }}
+        {{ \Qomiq\Brand\Logo::symbol('qomiq-credit__mark', decorative: true, idPrefix: 'qomiq-credit') }}
         <span class="qomiq-credit__text">{{ $credit['text'] }} <span class="qomiq-credit__brand">{{ $credit['brand'] }}</span></span>
     </span>
 </a>
