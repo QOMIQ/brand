@@ -91,12 +91,15 @@ Integraci pro agenty popisuje skill [`skills/qomiq-footer`](skills/qomiq-footer/
   (label-content-name-mismatch). Obojí shodilo Lighthouse, zjištěno
   v QOMIQ/eshop#48.
 
-**Symbol inline, ne `<img src="https://qomiq.cz/Qomiq.svg">`:** symbol
-z `assets/logo/qomiq-symbol.svg` je přímo v komponentě. Bere barvu z textu
-(`currentColor`), takže je vidět i na tmavé patičce (obrázek má pevnou
-tmavou barvu), a stránka nedělá požadavek na cizí doménu. Raw soubory
-z GitHubu se jako `<img>` nezobrazí (`text/plain`). Shodu s `assets/` hlídá
-`tests/CreditTest.php`, při změně loga se upraví i `credit/`.
+**Symbol inline, ne `<img src="https://qomiq.cz/Qomiq.svg">`:** aktuální
+symbol z `https://qomiq.cz/Qomiq.svg` (dvě propletená Q) je přímo
+v komponentě. Bere barvu z textu (`stroke="currentColor"`), takže je vidět
+i na tmavé patičce (obrázek má pevnou tmavou barvu), a stránka nedělá
+požadavek na cizí doménu. Raw soubory z GitHubu se jako `<img>` nezobrazí
+(`text/plain`). Masky mají id s prefixem `qomiq-credit-mask-`, ať nekolidují
+s id na stránce projektu. `assets/logo/qomiq-symbol.svg` a `favicon.svg` mají
+zatím starý symbol, proto ho credit nebere z `assets/`. Shodu React, HTML
+a Blade creditu hlídá `tests/CreditTest.php`, při změně loga se upraví všechny tři.
 
 Písmo Montserrat (`--qomiq-font`), ne Mont z qomiq.cz (DEMO licence, viz výš).
 
