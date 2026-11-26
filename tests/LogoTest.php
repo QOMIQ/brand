@@ -15,8 +15,10 @@ it('loga jsou ciste SVG s barvou z textu', function (string $file) {
         ->not->toContain('CorelDRAW')
         ->not->toContain('#2B2A29')
         ->not->toContain('viewBox="0 0 100 100"')
-        ->toContain('fill="currentColor"')
+        ->toContain('="currentColor"')
         ->toContain('aria-label="QOMIQ"')
+        ->not->toContain('17.386')
+        ->not->toContain('1.447 39.033')
         ->and(mb_check_encoding($svg, 'UTF-8'))->toBeTrue();
 })->with(['qomiq-symbol.svg', 'qomiq-wordmark.svg']);
 
@@ -29,7 +31,15 @@ it('favicon je data URI se svetlou variantou pro tmavy rezim', function () {
 
     expect($svg)->toContain('<svg ')
         ->toContain('#121212')
-        ->toContain('prefers-color-scheme:dark');
+        ->toContain('prefers-color-scheme:dark')
+        ->toContain('viewBox="120 120 760 760"');
+});
+
+it('masky symbolu maji id s prefixem, credit vlastni', function () {
+    expect((string) Logo::symbol())->toContain('id="qomiq-symbol-mask-a"')->toContain('url(#qomiq-symbol-mask-b)')
+        ->not->toMatch('/id="[ab]"/')
+        ->and((string) Logo::symbol(idPrefix: 'qomiq-credit'))->toContain('id="qomiq-credit-mask-a"')
+        ->toContain('url(#qomiq-credit-mask-b)')->not->toContain('qomiq-symbol-mask-');
 });
 
 it('vlozi tridu do inline SVG a escapuje ji', function () {

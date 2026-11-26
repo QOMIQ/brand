@@ -10,10 +10,15 @@ use Illuminate\Support\HtmlString;
  */
 final class Logo
 {
-    /** @param  bool  $decorative  vedle textu se značkou: skrýt čtečkám (aria-hidden), ať se název neopakuje */
-    public static function symbol(string $class = '', bool $decorative = false): HtmlString
+    /**
+     * @param  bool  $decorative  vedle textu se značkou: skrýt čtečkám (aria-hidden), ať se název neopakuje
+     * @param  string  $idPrefix  prefix id masek, ať se dvě značky na jedné stránce (hlavička, credit) nepletou
+     */
+    public static function symbol(string $class = '', bool $decorative = false, string $idPrefix = 'qomiq-symbol'): HtmlString
     {
-        return self::inline('qomiq-symbol.svg', $class, $decorative);
+        $svg = (string) self::inline('qomiq-symbol.svg', $class, $decorative);
+
+        return new HtmlString(str_replace('qomiq-symbol-mask-', e($idPrefix).'-mask-', $svg));
     }
 
     public static function wordmark(string $class = ''): HtmlString
